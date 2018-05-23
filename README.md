@@ -1,8 +1,8 @@
-# process-metrics
+# metrica
 
-[![npm version](https://badge.fury.io/js/process-metrics.svg)](http://badge.fury.io/js/process-metrics)
-[![CircleCI](https://circleci.com/gh/lmammino/process-metrics.svg?style=shield)](https://circleci.com/gh/lmammino/process-metrics)
-[![codecov.io](https://codecov.io/gh/lmammino/process-metrics/coverage.svg?branch=master)](https://codecov.io/gh/lmammino/process-metrics)
+[![npm version](https://badge.fury.io/js/metrica.svg)](http://badge.fury.io/js/metrica)
+[![CircleCI](https://circleci.com/gh/lmammino/metrica.svg?style=shield)](https://circleci.com/gh/lmammino/metrica)
+[![codecov.io](https://codecov.io/gh/lmammino/metrica/coverage.svg?branch=master)](https://codecov.io/gh/lmammino/metrica)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Event Emitter based node library that emits process metrics (uptime, memory, cpu) at given intervals
@@ -15,16 +15,16 @@ Event Emitter based node library that emits process metrics (uptime, memory, cpu
 As usual, this happens through NPM:
 
 ```bash
-npm install --save process-metrics
+npm install --save metrica
 ```
 
 Then, in your code:
 
 ```javascript
-const metrics = require('process-metrics')()
+const m = require('metrica')()
 // metrics is an event emitter
 
-metrics.on('tick', (data) => console.log(data))
+m.on('tick', (data) => console.log(data))
 // tick happens (by default) every minute and data will look like:
 // {
 //   cpu: {
@@ -86,11 +86,11 @@ A process metrics instance is an event emitter and will emit the following event
 This example will collect and log metrics for 5 seconds and then stop the collection:
 
 ```javascript
-const ProcessMetrics = require('process-metrics')
-const pm = ProcessMetrics({ interval: '1s', autoStart: false })
-pm.on('tick', (metrics) => console.log('Tick:', metrics))
-setTimeout(() => pm.stop(), 5000)
-pm.start()
+const metrica = require('metrica')
+const m = metrica({ interval: '1s', autoStart: false })
+m.on('tick', (metrics) => console.log('Tick:', metrics))
+setTimeout(() => m.stop(), 5000)
+m.start()
 ```
 
 
@@ -98,7 +98,7 @@ pm.start()
 
 Everyone is very welcome to contribute to this project.
 You can contribute just by submitting bugs or suggesting improvements by
-[opening an issue on GitHub](https://github.com/lmammino/process-metrics/issues).
+[opening an issue on GitHub](https://github.com/lmammino/metrica/issues).
 
 
 ## 🤦‍ License

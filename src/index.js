@@ -6,7 +6,7 @@ const defaultOptions = {
   autoStart: true
 }
 
-class ProcessMetrics extends EventEmitter {
+class Metrica extends EventEmitter {
   constructor (options) {
     super()
     const opt = Object.assign({}, defaultOptions, options)
@@ -42,4 +42,4 @@ class ProcessMetrics extends EventEmitter {
   }
 }
 
-module.exports = (options) => new ProcessMetrics(options)
+module.exports = (options) => new Metrica(options)

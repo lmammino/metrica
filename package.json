@@ -1,5 +1,5 @@
 {
-  "name": "process-metrics",
+  "name": "metrica",
   "version": "1.0.0",
   "description": "Event Emitter based node library that emits process metrics (uptime, memory, cpu) at given intervals",
   "main": "src/index.js",
@@ -20,7 +20,7 @@
   "engineStrict": true,
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lmammino/process-metrics.git"
+    "url": "git+https://github.com/lmammino/metrica.git"
   },
   "keywords": [
     "metrics",
@@ -38,9 +38,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lmammino/process-metrics/issues"
+    "url": "https://github.com/lmammino/metrica/issues"
   },
-  "homepage": "https://github.com/lmammino/process-metrics#readme",
+  "homepage": "https://github.com/lmammino/metrica#readme",
   "dependencies": {
     "ms": "^2.1.1"
   },
